@@ -24,6 +24,7 @@ Building and installing with LuaRocks
 To build and install, run:
 
     luarocks make
+    luarocks test
 
 To install the latest release using [luarocks.org], run:
 
