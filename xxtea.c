@@ -25,7 +25,7 @@
 #include <lauxlib.h>
 
 #define MODNAME "lua-xxtea"
-#define VERSION "0.1.0"
+#define VERSION "0.1.1"
 
 #ifdef _WIN32
 #define EXPORT __declspec(dllexport)
