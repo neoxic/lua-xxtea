@@ -15,3 +15,5 @@ for i = 1, 1000 do
 	local key = randstr(16)
 	assert(xxtea.decrypt(xxtea.encrypt(str, key), key) == str)
 end
+
+assert(not pcall(xxtea.decrypt, 'abc'))
