@@ -91,7 +91,7 @@ static int f_encrypt(lua_State *L) {
 	char *dbuf, kbuf[16];
 	uint32_t *v, *k;
 	unsigned n = (slen + 3) / 4 + 1;
-	luaL_argcheck(L, slen, 1, "invalid data");
+	luaL_argcheck(L, slen, 1, "empty data");
 	luaL_argcheck(L, klen <= 16, 2, "key cannot be more than 16 bytes long");
 	memcpy(dbuf = lua_newuserdata(L, dlen = n * 4), str, slen);
 	memset(dbuf + slen, 0, dlen - slen);
@@ -113,7 +113,7 @@ static int f_decrypt(lua_State *L) {
 	char *dbuf, kbuf[16];
 	uint32_t *v, *k;
 	unsigned n = slen / 4;
-	luaL_argcheck(L, slen >= 8 && slen == n * 4, 1, "invalid data");
+	luaL_argcheck(L, slen >= 8 && slen == n * 4, 1, "malformed data");
 	luaL_argcheck(L, klen <= 16, 2, "key cannot be more than 16 bytes long");
 	memcpy(dbuf = lua_newuserdata(L, slen), str, slen);
 	memcpy(kbuf, key, klen);

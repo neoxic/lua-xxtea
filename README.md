@@ -1,8 +1,8 @@
 XXTEA encryption/decryption module for Lua
 ==========================================
 
-[lua-xxtea] encrypts/decrypts binary strings with 128 bit keys (also binary strings). When a key is
-less than 16 bytes long, it is assumed to have trailing zeroes ('\0') to form 128 bits.
+[lua-xxtea] encrypts/decrypts binary strings with 128 bit keys (16 bytes long binary strings).
+When a key is less than 16 bytes long, it is assumed to have trailing zeroes ('\0').
 
 ```Lua
 local xxtea = require 'xxtea'
