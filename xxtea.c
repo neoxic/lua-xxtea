@@ -136,7 +136,7 @@ static const luaL_Reg l_xxtea[] = {
 
 int luaopen_xxtea(lua_State *L) {
 #if LUA_VERSION_NUM < 502
-	luaL_register(L, lua_tostring(L, 1), l_xxtea);
+	luaL_register(L, "xxtea", l_xxtea);
 #else
 	luaL_newlib(L, l_xxtea);
 #endif
