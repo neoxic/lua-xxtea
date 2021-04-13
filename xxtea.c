@@ -1,5 +1,5 @@
 /*
-** Copyright (C) 2019-2020 Arseny Vakhrushev <arseny.vakhrushev@me.com>
+** Copyright (C) 2019-2021 Arseny Vakhrushev <arseny.vakhrushev@me.com>
 **
 ** Permission is hereby granted, free of charge, to any person obtaining a copy
 ** of this software and associated documentation files (the "Software"), to deal
@@ -25,7 +25,7 @@
 #include <lauxlib.h>
 
 #define MODNAME "lua-xxtea"
-#define VERSION "0.1.2"
+#define VERSION "1.0.0"
 
 #ifdef _WIN32
 #define EXPORT __declspec(dllexport)
